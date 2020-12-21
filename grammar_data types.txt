@@ -1,3 +1,32 @@
-var a = 1;
-let k = 1;
-const = 1;
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+//....строковый тип данных
+
+let name = 'Ann';
+alert(`Имя: ${name}`)
+alert(name);
+alert ('my name is ' + name);
+
+//...булевый тип данных
+
+let isGreater = 4>1;
+alert (isGreater);
+
+//...undefined -- значение не присвоено
+
+let age;
+alert(age);
+undefined
+
+//...null -- значение неизвестно
+
+let age = null;
+alert (age);
+
+
+</script>
+</body>
+</html>
