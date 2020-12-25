@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<script>
+	'use strict';
+
+	/*
+	-----1 задача-----
+	let accessAllowed;
+	let age = prompt('Сколько вам лет?');
+	
+	if (age > 18) {
+	  accessAllowed = true;
+	} else {
+	  accessAllowed = false;
+	}
+	
+	-----2 задача-----
+	let accessAllowed = (age>18) ? true : false; 
+	// let accessAllowed = age>18; тоже самое, что и сторочка выше
+	
+	-----3 задача-----
+	let officialJavaScriptName = prompt('Какое "официальное" название JavaScript?');
+	if (officialJavaScriptName == 'ECMAScript'){
+	  alert('Праивльно');
+	}
+	else{
+	  alert('Не знаете? ECMAScript!');
+	}
+	
+	-----4 задача-----
+	let value = prompt('Enter a number', '');
+	if (value>0){
+	  alert(1);
+	}
+	else if(value<-1){
+	  alert(-1);
+	}
+	else if(value == 0)
+	{
+	  alert(0);
+	}
+	*/
+
+	let login = prompt('Enter', '');
+	let message = login == 'Сотрудник'
+		? alert('Привет')
+		: login == 'Директор'
+			? alert('Здравствуйте')
+			: login == ''
+				? alert('Нет логина')
+				: alert('');
+</script>
