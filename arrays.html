@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<script>
+    'use strict';
+
+    alert(getMaxSubSum([-1, 2, 3, -9]));// = 5 (сумма выделенных)
+    alert(getMaxSubSum([2, -1, 2, 3, -9]));// = 6
+    alert(getMaxSubSum([-1, 2, 3, -9, 11])); //= 11 
+    alert(getMaxSubSum([-2, -1, 1, 2]));// = 3 
+    alert(getMaxSubSum([1, 2, 3]));// = 6 (берём все)
+    alert(getMaxSubSum([-1, -2, -3]));//0
+    
+    function getMaxSubSum(arr){
+        let maxSum = 0;
+        let currentSum = 0;
+
+        for(let i = 0; i < arr.length; i++) { 
+            currentSum += arr[i];            
+
+            if(currentSum < 0) {
+                currentSum = 0;
+            } else {
+                maxSum = currentSum;
+            }
+        }
+        
+        return maxSum;
+    }
+    /*function getMaxSubSum(arr){
+        let maxSum = 0;
+
+        for(let i = 0; i < arr.length; i++) { 
+            let currentSum = 0;
+
+            for(let j = i; j < arr.length; j++) {
+                currentSum += arr[j];
+
+                if(currentSum > maxSum) {
+                    maxSum = currentSum;
+                }
+            } 
+        }
+
+        return maxSum;
+    }*/
+
+  
+    /*function isEmpty(obj) {
+        for (let key in obj){
+        return false;
+        }
+        return true;
+    }
+
+    let schedule = {};
+    
+    alert( isEmpty(schedule) ); // true
+
+    schedule["8:30"] = "подъём";
+
+    alert( isEmpty(schedule) ); // false
+
+      let salaries = {
+ 
+    };
+  
+    function sumSalary(salaries) {
+	let sum = 0;
+	
+	function validateSalary(salary) {
+		return typeof salary == 'number' && isFinite(salary);
+	}
+	
+	for (let key in salaries) {
+		const salaryAmount = salaries[key];
+		if (validateSalary(salaryAmount)) {
+			sum += salaryAmount;
+		}
+	}
+
+	return sum;
+}
+   
+
+    function sumInput() {
+        function createArray() {
+            let array = [];
+            let value = 0;
+
+            while(true) {
+                value = prompt('Enter a value', '1');
+
+                if(value = '' || isFinite(value) || value ===null) {
+                    break;
+                }
+
+                array.push(+value);
+            }            
+
+            return array;
+        }
+        
+        function sumArray(array) {
+            let sum = 0;           
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            };
+            
+            return sum;
+        }
+        
+        const array = createArray();
+        const sum = sumArray(array)
+        return sum;
+    }
+
+    alert(sumInput());
+
+
+    const styles = ['Джаз', 'Блюз'];
+    alert(styles); // Джаз, Блюз
+
+    styles.push('Рок-н-ролл');
+    alert(styles); // Джаз, Блюз, Рок-н-ролл
+
+    replaceMiddleArrayElement(styles, 'Классика');
+    alert(styles); // Джаз, Классика, Рок-н-ролл
+
+    styles.shift([0]);
+    alert(styles); // Классика, Рок-н-ролл
+
+    styles.unshift('Реп', 'Регги');
+    alert(styles); // Рэп, Регги, Классика, Рок-н-ролл
+
+
+    function replaceMiddleArrayElement(array, element) {
+        const middleElement = Math.floor(array.length / 2);
+        array[middleElement] = element;
+    }
+*/
+
+</script>
+
+</html>
