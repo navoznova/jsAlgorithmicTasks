@@ -1,40 +1,47 @@
-/*
-//Фибоначчи
-function fib(n){
-    if(n < 2) {
-        return 1;
-    } else {
-        return fib(n-1) + fib (n-2);
+function makeCounter() {
+    let count = 0;
+    function counter() {
+        return count++;
+    }
+
+    counter.set = (value) => {
+        count = value;
+    }
+
+    counter.decrease = () => {
+        count--;
+    }
+
+    return counter;
+}
+
+function makeArmy() {
+    let shooters = [];
+
+    for (let i = 0; i < 10; i++) {
+        let shooter = function () {
+            console.log(i);
+        };
+        shooters.push(shooter);
+    }
+
+    return shooters;
+}
+
+function byField(fieldName) {
+    return function (elem1, elem2) {
+        return elem1[fieldName] > elem2[fieldName] ? 1 : -1;
     }
 }
 
-//Факториал числа
-function fuct(num){
-    if(num == 1){
-        return 1;
-
-    } else {
-        return num * fuct(num - 1);
+function inBetween(a, b) {
+    return function (elem) {
+        return elem >= a && elem <= b;
     }
 }
 
-//Сумма чисел
-function sumTo(n) {
-    Арифметическая прогрессия     
-     return n * (n + 1) / 2;
-
-    Решение через рекурсию
-    if(num == 1){
-        return 1;
-    } else {
-        return num += sumTo(num-1);
+function inArray(arr) {
+    return function (elem) {
+        return arr.includes(elem);
     }
-
-    Решение через цикл
-    let sum = 0;
-    for(let i = 1; i<=num; i++){
-        sum +=i;
-    }
-    return sum;
 }
-*/
