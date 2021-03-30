@@ -1,47 +1,22 @@
-function makeCounter() {
-    let count = 0;
-    function counter() {
-        return count++;
-    }
+function clearArrayOfAnagrams (arr) {
+    let map = new Map ();
 
-    counter.set = (value) => {
-        count = value;
-    }
-
-    counter.decrease = () => {
-        count--;
-    }
-
-    return counter;
+    arr.forEach(element => {
+        let key = element.toLowerCase().split('').sort().join('');
+         map.set(key, element);
+    });
+    return Array.from(map.values());
 }
 
-function makeArmy() {
-    let shooters = [];
+function uniqueElemInArray(arr) {
+    return Array.from(new Set (arr));
 
-    for (let i = 0; i < 10; i++) {
-        let shooter = function () {
-            console.log(i);
-        };
-        shooters.push(shooter);
+    /*let uniqArray = [];
+    let set = new Set();
+
+    arr.forEach(element => {set.add(element)});
+    for (let value of set) {
+        uniqArray.push(value);
     }
-
-    return shooters;
-}
-
-function byField(fieldName) {
-    return function (elem1, elem2) {
-        return elem1[fieldName] > elem2[fieldName] ? 1 : -1;
-    }
-}
-
-function inBetween(a, b) {
-    return function (elem) {
-        return elem >= a && elem <= b;
-    }
-}
-
-function inArray(arr) {
-    return function (elem) {
-        return arr.includes(elem);
-    }
+    return uniqArray;*/
 }
