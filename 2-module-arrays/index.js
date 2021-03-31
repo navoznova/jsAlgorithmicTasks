@@ -41,12 +41,16 @@ function topSalary (salaries) {
     let nameMax = null;
 
     salariesArray.forEach(element => {
-        let [name, salary] = element;
-
+        if (maxSalary < element[1]) {
+            maxSalary = element[1];
+            nameMax = element[0];
+        }   
+        
+        /*let [name, salary] = element;
         if (maxSalary < salary) {
             maxSalary = salary;
             nameMax = name;
-        }   
+        }*/   
     });
     
     return nameMax;
