@@ -28,21 +28,21 @@ function getDateAgo(date, days) {
 }
 
 function getLastDayOfMonth(year, month) {
-    let previosDay = new Date(year, month+1, -1);
+    let previosDay = new Date(year, month + 1, -1);
     //let previosDay = new Date(year, month+1, 0);
     let date = previosDay.getDate();
     return date;
 }
 
 function getSecondsToday() {
-    let now = new Date ();
+    let now = new Date();
     return now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
-    
+
 }
 
 function getSecondsToTomorrow() {
-    let now = new Date ();
-    let tomorrow = new Date (now.getFullYear(), now.getMonth(), now.getDate()+1);
+    let now = new Date();
+    let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
 
-    return Math.round((tomorrow - now)/1000);
+    return Math.round((tomorrow - now) / 1000);
 }
