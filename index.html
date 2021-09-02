@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8" />
+    <script src="index.js"></script>
+</head>
+<script>
+    console.log(duplicateEncode("din"));
+    console.log(duplicateEncode("recede"));
+    console.log(duplicateEncode("Success"));
+    console.log(duplicateEncode("(( @"));
+
+    var uniqueInOrder = function (iterable) {
+        var res = [];
+        for (var i = 0; i < iterable.length; i++) {
+            if (iterable[i] != iterable[i + 1]) res.push(iterable[i]);
+        }
+        return res;
+
+        /*let element = null;
+        let uniqueArr = [];
+      
+        for (let i = 0; i < iterable.length; i++) {
+            if (element != iterable[i]) {
+                element = iterable[i];
+                uniqueArr.push(element);
+            }
+        }
+
+        return uniqueArr;*/
+    }
+
+    console.log(uniqueInOrder([1, 2, 2, 2, 2, 3, 3]));
+    //console.log(uniqueInOrder([]));
+    //console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+</script>
+
+</html>
